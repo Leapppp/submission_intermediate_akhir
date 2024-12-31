@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="16dp">
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/image_preview"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/baseline_image_24" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom|center"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="14dp">
+
+            <Button
+                android:id="@+id/button_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/camera_button_desc"
+                android:text="@string/take_photo" />
+
+            <Button
+                android:id="@+id/button_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/choose_from_gallery"
+                android:contentDescription="@string/galery_button_desc" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/story_description_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_story_description"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:background="@android:drawable/editbox_background_normal"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/button_upload_story"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/upload_story_button" />
+    </LinearLayout>
+</ScrollView>
